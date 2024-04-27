@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div>
@@ -29,22 +31,25 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a>All Tourists Spot</a>
+                <NavLink to="/AllTouristSpot">All Tourist Spot</NavLink>
               </li>
               <li>
-                <a>Add Tourists Spot</a>
+                <NavLink to="/AddTouristSpot">Add Tourists Spot</NavLink>
               </li>
               <li>
-                <a>My List</a>
+                <NavLink to="/MyList">My List</NavLink>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">Travel America</a>
+          <Link to="/">
+            {" "}
+            <a className="btn btn-ghost text-xl">Travel America</a>
+          </Link>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
