@@ -10,6 +10,7 @@ import MyList from "./MyList";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
 import SelectedTouristSpotsViewDetails from "./SelectedTouristSpots/SelectedTouristSpotsViewDetails";
+import AllTouristSpotViewDetailsCard from "./AllTouristSpotViewDetailsCard";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
           element:<AllTouristSpot></AllTouristSpot>
         },
         {
-          path:'/MyList',
+          path:'/MyList/:name',
+          loader:({params})=>fetch(`http://localhost:5001/myList/${params.name}`),
           element:<MyList></MyList>
         },
         {
@@ -45,6 +47,11 @@ const router = createBrowserRouter([
           loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
           element:<SelectedTouristSpotsViewDetails></SelectedTouristSpotsViewDetails>
 
+        },
+        {
+          path:'/allTouristSpot/:id',
+          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
+          element:<AllTouristSpotViewDetailsCard></AllTouristSpotViewDetailsCard>
         }
       ]
     },
