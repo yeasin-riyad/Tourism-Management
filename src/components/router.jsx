@@ -7,6 +7,9 @@ import HomePage from "./HomePage";
 import AddTouristSpot from "./AddTouristSpot";
 import AllTouristSpot from "./AllTouristSpot";
 import MyList from "./MyList";
+import Register from "./Register/Register";
+import Login from "./Login/Login";
+import SelectedTouristSpotsViewDetails from "./SelectedTouristSpots/SelectedTouristSpotsViewDetails";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +31,20 @@ const router = createBrowserRouter([
         {
           path:'/MyList',
           element:<MyList></MyList>
+        },
+        {
+          path:'/Register',
+          element:<Register></Register>
+        },
+        {
+          path:'/login',
+          element:<Login></Login>
+        },
+        {
+          path:'/selectedTouristSpot/:id',
+          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
+          element:<SelectedTouristSpotsViewDetails></SelectedTouristSpotsViewDetails>
+
         }
       ]
     },

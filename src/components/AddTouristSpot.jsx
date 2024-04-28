@@ -1,11 +1,15 @@
 
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from './ContextApi/FirebaseProvider';
 
 
 
 
 
 const AddTouristSpot = () => {
+  const{loggedUser}=useContext(AuthContext)
+  
   const addInformation=async (e)=>{
     e.preventDefault();
     const form = e.target;
@@ -76,6 +80,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Image</label>
                 <input
+                 required
                   name="image"
                   type="text"
                   placeholder="Image Url"
@@ -85,6 +90,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Tourists Spot Name</label>
                 <input
+                 required
                   name="spotName"
                   type="text"
                   placeholder="tourists spot name"
@@ -95,7 +101,7 @@ const AddTouristSpot = () => {
                 <label className="text-sm">Country Name</label>
                 {/* <input name="countryName" type="text" placeholder="Country Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" /> */}
               </div>{" "}
-              <select name="countryName"  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50">
+              <select  required name="countryName"  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50">
                 <option value="USA">USA</option>
                 <option value="Canada">Canada</option>
                 <option value="Brazil">Brazil</option>
@@ -106,6 +112,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full">
                 <label className="text-sm">Location</label>
                 <input
+                 required
                   name="location"
                   type="text"
                   placeholder="Location"
@@ -115,6 +122,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full">
                 <label className="text-sm">Short Description</label>
                 <textarea
+                 required
                   name="description"
                   placeholder="Short Description"
                   className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
@@ -123,6 +131,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Average Cost</label>
                 <input
+                 required
                   name="avgCost"
                   type="text"
                   placeholder="Average Cost"
@@ -132,6 +141,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Season</label>
                 <input
+                 required
                   name="season"
                   type="text"
                   placeholder="Season"
@@ -141,6 +151,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Travel Time</label>
                 <input
+                 required
                   name="travelTime"
                   type="text"
                   placeholder="Travel Time"
@@ -150,6 +161,7 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Total Visitors Per Year</label>
                 <input
+                 required
                   name="totalVisitors"
                   type="text"
                   placeholder="Total Visitors Per Year"
@@ -159,6 +171,9 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Email</label>
                 <input
+                 
+                 defaultValue={loggedUser.email}
+                 disabled
                   name="email"
                   type="email"
                   placeholder="Your Email"
@@ -168,6 +183,8 @@ const AddTouristSpot = () => {
               <div className="col-span-full sm:col-span-2">
                 <label className="text-sm">Your Name</label>
                 <input
+                  defaultValue={loggedUser.displayName}
+                  disabled
                   name="name"
                   type="text"
                   placeholder="Enter Your Name"

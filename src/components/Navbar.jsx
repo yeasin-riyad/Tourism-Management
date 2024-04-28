@@ -1,6 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, Navigate, useNavigate,  } from "react-router-dom";
+import { AuthContext } from "./ContextApi/FirebaseProvider";
+
 
 const Navbar = () => {
+  const {SignOut,loggedUser}=useContext(AuthContext)
+  const navigate = useNavigate();
+ 
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -51,7 +58,49 @@ const Navbar = () => {
             <a className="btn btn-ghost text-xl">Travel America</a>
           </Link>
         </div>
+
+
+
         <div className="navbar-end">
+          {loggedUser? (
+            <div className="flex items-center gap-x-1  lg:gap-x-2">
+              <div
+                className="w-10 rounded-full tooltip tooltip-bottom"
+                data-tip={loggedUser.displayName}
+              >
+                <img
+                  className="rounded-full"
+                  alt="user Profile Image"
+                  src={
+                    loggedUser?.photoURL
+                      ? loggedUser.photoURL
+                      : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  }
+                />
+              </div>
+              <button
+                className="btn"
+                onClick={() => {
+                  SignOut().then(() => {
+                    navigate("/");
+                  });
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            //  <button className="btn" onClick={<Navigate to='/login'></Navigate>}>Login</button>
+            <Link className="btn" to="/login">
+              Login
+            </Link>
+          )}
+        </div>
+
+
+
+        
+        {/* <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +136,7 @@ const Navbar = () => {
               <span className="badge badge-xs badge-primary indicator-item"></span>
             </div>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
