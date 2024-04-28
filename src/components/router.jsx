@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         {
           path:'/MyList/:name',
           loader:({params})=>fetch(`http://localhost:5001/myList/${params.name}`),
-          element:<MyList></MyList>
+          element:<PrivateRouter><MyList></MyList></PrivateRouter>
         },
         {
           path:'/Register',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         {
           path:'/selectedTouristSpot/:id',
           loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
-          element:<SelectedTouristSpotsViewDetails></SelectedTouristSpotsViewDetails>
+          element:<PrivateRouter><SelectedTouristSpotsViewDetails></SelectedTouristSpotsViewDetails></PrivateRouter>
 
         },
         {
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         {
           path:'/updatePage/:id',
           loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`)),
-          element:<UpdatePage></UpdatePage>
+          element:<PrivateRouter><UpdatePage></UpdatePage></PrivateRouter>
         }
       ]
     },

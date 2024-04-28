@@ -87,7 +87,7 @@ console.log(loggedUser)
 
 
 
-  const contextValue={createUser,UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin,SignOut,loggedUser,UpdateUser}
+  const contextValue={createUser,UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin,SignOut,loggedUser,UpdateUser,loading}
 
 
   return (
