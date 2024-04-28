@@ -41,7 +41,7 @@ const GithubLogin=()=>{
 // Update User
 
 const UpdateUser=(currentUser,displayName,photoURL)=>{
-  
+  setLoading(true)
   return updateProfile(currentUser,{
       displayName, photoURL
   })
@@ -50,7 +50,7 @@ const UpdateUser=(currentUser,displayName,photoURL)=>{
 // Sign Out
 
 const SignOut=()=>{
-  
+  setLoading(false)
   return signOut(auth);
 }
 

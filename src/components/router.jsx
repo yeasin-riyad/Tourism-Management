@@ -11,6 +11,8 @@ import Register from "./Register/Register";
 import Login from "./Login/Login";
 import SelectedTouristSpotsViewDetails from "./SelectedTouristSpots/SelectedTouristSpotsViewDetails";
 import AllTouristSpotViewDetailsCard from "./AllTouristSpotViewDetailsCard";
+import UpdatePage from "./UpdatePage/UpdatePage";
+import PrivateRouter from "./PrivateRouter/PrivateRouter";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/AddTouristSpot',
-            element:<AddTouristSpot></AddTouristSpot>
+            element:<PrivateRouter><AddTouristSpot></AddTouristSpot></PrivateRouter>
         },
         {
           path:'/AllTouristSpot',
@@ -52,6 +54,11 @@ const router = createBrowserRouter([
           path:'/allTouristSpot/:id',
           loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
           element:<AllTouristSpotViewDetailsCard></AllTouristSpotViewDetailsCard>
+        },
+        {
+          path:'/updatePage/:id',
+          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`)),
+          element:<UpdatePage></UpdatePage>
         }
       ]
     },

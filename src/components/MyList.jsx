@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, Navigate, useLoaderData, useNavigate } from "react-router-dom";
 
 
 const MyList = () => {
   const data = useLoaderData();
+  const navigate=useNavigate()
   console.log(data);
   return (
     <div>
@@ -17,7 +18,6 @@ const MyList = () => {
       </div> */}
 
       <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
-        <h2 className="mb-4 text-2xl font-semibold leading-tight">Invoices</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full text-xs">
             <colgroup>
@@ -30,14 +30,14 @@ const MyList = () => {
             </colgroup>
             <thead className="dark:bg-gray-300">
               <tr className="text-left">
-                <th className="p-3">Spot Name</th>
-                <th className="p-3">Country Name</th>
-                <th className="p-3">Location</th>
+                <th className="px-2 lg:p-3">Spot Name</th>
+                <th className="px-2 lg:p-3">Country Name</th>
+                <th className="px-2 lg:p-3">Location</th>
 
-                <th className="p-3">Season</th>
-                <th className="p-3">Average Cost</th>
-                <th className="p-3 text-right"></th>
-                <th className="p-3"></th>
+                <th className="px-2 lg:p-3">Season</th>
+                <th className="px-2 lg:p-3">Average Cost</th>
+                <th className="px-2 lg:p-3 text-right"></th>
+                <th className="px-2 lg:p-3"></th>
               </tr>
             </thead>
             <tbody>
@@ -46,33 +46,33 @@ const MyList = () => {
                   key={index}
                   className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50"
                 >
-                  <td className="p-3">
+                  <td className="px-2 lg:p-3">
                     <p>{singleData.spotName}</p>
                   </td>
 
-                  <td className="p-3">
+                  <td className="px-2 lg:p-3">
                     <p>{singleData.countryName}</p>
                   </td>
 
-                  <td className="p-3">
+                  <td className="px-2 lg:p-3">
                     <p>{singleData.location}</p>
                   </td>
 
-                  <td className="p-3">
+                  <td className="px-2 lg:p-3">
                     <p>{singleData.season}</p>
                   </td>
 
-                  <td className="p-3">
+                  <td className="px-2 lg:p-3">
                     <p>{singleData.avgCost}</p>
                   </td>
 
-                  <td className="p-3 text-right">
+                  <td className="px-2 lg:p-3 text-right">
                   <span className="px-3 py-1 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
-                      <button>Update</button>
+                      <button onClick={()=>navigate(`/updatePage/${singleData?._id}`)}>Update</button>
                     </span>
                   </td>
 
-                  <td className="p-3 text-right">
+                  <td className="px-2 lg:p-3 text-right">
                   <span className="px-3 py-1 font-semibold rounded-md dark:bg-red-600 dark:text-gray-50">
                       <button>Delete</button>
                     </span>
