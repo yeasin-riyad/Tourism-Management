@@ -103,7 +103,7 @@ const UpdatePage = () => {
                   name="image"
                   type="text"
                   placeholder="Image Url"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -113,13 +113,13 @@ const UpdatePage = () => {
                   name="spotName"
                   type="text"
                   placeholder="tourists spot name"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className=" ">
                 <label className="text-sm">Country Name</label>
               </div>
-              <select  defaultValue={countryName} name="countryName"  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50">
+              <select  defaultValue={countryName} name="countryName"  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700">
                 <option value="USA">USA</option>
                 <option value="Canada">Canada</option>
                 <option value="Brazil">Brazil</option>
@@ -134,7 +134,7 @@ const UpdatePage = () => {
                   name="location"
                   type="text"
                   placeholder="Location"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full">
@@ -143,7 +143,7 @@ const UpdatePage = () => {
                  defaultValue={description}
                   name="description"
                   placeholder="Short Description"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 ></textarea>
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -153,7 +153,7 @@ const UpdatePage = () => {
                   name="avgCost"
                   type="text"
                   placeholder="Average Cost"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -163,7 +163,7 @@ const UpdatePage = () => {
                   name="season"
                   type="text"
                   placeholder="Season"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -173,7 +173,7 @@ const UpdatePage = () => {
                   name="travelTime"
                   type="text"
                   placeholder="Travel Time"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -183,7 +183,7 @@ const UpdatePage = () => {
                   name="totalVisitors"
                   type="text"
                   placeholder="Total Visitors Per Year"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
 
@@ -196,7 +196,7 @@ const UpdatePage = () => {
                   name="email"
                   type="email"
                   placeholder="Your Email"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -207,7 +207,7 @@ const UpdatePage = () => {
                   name="name"
                   type="text"
                   placeholder="Enter Your Name"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 text-pink-700 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
             

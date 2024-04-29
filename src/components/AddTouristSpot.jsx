@@ -84,7 +84,7 @@ const AddTouristSpot = () => {
                   name="image"
                   type="text"
                   placeholder="Image Url"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700  rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -94,14 +94,14 @@ const AddTouristSpot = () => {
                   name="spotName"
                   type="text"
                   placeholder="tourists spot name"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring  focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className=" ">
                 <label className="text-sm">Country Name</label>
                 {/* <input name="countryName" type="text" placeholder="Country Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" /> */}
               </div>{" "}
-              <select  required name="countryName"  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50">
+              <select  required name="countryName"  className="w-full text-pink-700 rounded-md  focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:border-gray-300">
                 <option value="USA">USA</option>
                 <option value="Canada">Canada</option>
                 <option value="Brazil">Brazil</option>
@@ -116,7 +116,7 @@ const AddTouristSpot = () => {
                   name="location"
                   type="text"
                   placeholder="Location"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full">
@@ -125,7 +125,7 @@ const AddTouristSpot = () => {
                  required
                   name="description"
                   placeholder="Short Description"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:border-gray-300"
                 ></textarea>
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -135,7 +135,7 @@ const AddTouristSpot = () => {
                   name="avgCost"
                   type="text"
                   placeholder="Average Cost"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -145,7 +145,7 @@ const AddTouristSpot = () => {
                   name="season"
                   type="text"
                   placeholder="Season"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -155,7 +155,7 @@ const AddTouristSpot = () => {
                   name="travelTime"
                   type="text"
                   placeholder="Travel Time"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -165,7 +165,7 @@ const AddTouristSpot = () => {
                   name="totalVisitors"
                   type="text"
                   placeholder="Total Visitors Per Year"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -177,7 +177,7 @@ const AddTouristSpot = () => {
                   name="email"
                   type="email"
                   placeholder="Your Email"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -188,7 +188,7 @@ const AddTouristSpot = () => {
                   name="name"
                   type="text"
                   placeholder="Enter Your Name"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                  className="w-full text-pink-700 rounded-md  focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300"
                 />
               </div>
               <div className="col-span-full">
