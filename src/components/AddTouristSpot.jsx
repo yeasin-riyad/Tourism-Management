@@ -55,7 +55,7 @@ const AddTouristSpot = () => {
           title: 'Success!',
           text: 'Tourist Spot Added Successfully.',
           icon: 'success',
-          confirmButtonText: 'Back'
+          confirmButtonText: 'Enjoy !!'
         })
       }
     })

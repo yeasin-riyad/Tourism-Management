@@ -13,6 +13,7 @@ import SelectedTouristSpotsViewDetails from "./SelectedTouristSpots/SelectedTour
 import AllTouristSpotViewDetailsCard from "./AllTouristSpotViewDetailsCard";
 import UpdatePage from "./UpdatePage/UpdatePage";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
+// import { DatabaseDocumentDelete } from "./deleteUserSingleDocument/DatabaseDocumentDelete";
 
 
 const router = createBrowserRouter([
@@ -63,8 +64,9 @@ const router = createBrowserRouter([
         },
         {
           // path:'/deleteDocument/:id',
-          // // loader:({params})=>fetch(`http://localhost:5001/deleteDocument/${params?.id}`),
-          // element:<DeleteDocument></DeleteDocument>
+          // loader:({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`),
+          // element:<DatabaseDocumentDelete></DatabaseDocumentDelete>
+       
         }
 
       ]
