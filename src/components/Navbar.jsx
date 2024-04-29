@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div className="z-50 sticky top-0">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -61,7 +61,7 @@ const Navbar = () => {
               <li>
                 <NavLink to="/AddTouristSpot">Add Tourists Spot</NavLink>
               </li>
-              <li>
+              <li >
                 <NavLink to={`/MyList/${loggedUser?.displayName}`}>
                   My List
                 </NavLink>
