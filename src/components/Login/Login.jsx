@@ -1,4 +1,4 @@
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { useContext, useState } from "react";
@@ -123,7 +123,6 @@ const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(Au
                 <ToastContainer position="bottom-right" />
               </div>
             </form>
-            {/* <button className="btn btn-primary mt-2" onClick={googleLogin}>Google</button> */}
             <p>
               New To Website??Please
               <Link to="/register" state={location.state}>

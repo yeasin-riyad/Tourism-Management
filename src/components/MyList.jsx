@@ -74,7 +74,10 @@ const MyList = () => {
 
                   <td className="px-2 lg:p-3 text-right">
                   <span className="px-3 py-1 font-semibold rounded-md dark:bg-red-600 dark:text-gray-50">
+                      {/* <button onClick={()=>navigate(`/deleteDocument/${singleData?._id}`)}>Delete</button> */}
                       <button>Delete</button>
+
+                      
                     </span>
                   </td>
                 </tr>;

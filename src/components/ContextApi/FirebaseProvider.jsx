@@ -67,6 +67,7 @@ const SignOut=()=>{
         // User is signed out
         
         setLoggedUser(null)
+        setLoading(false)
       }
     });
 

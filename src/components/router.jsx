@@ -14,6 +14,7 @@ import AllTouristSpotViewDetailsCard from "./AllTouristSpotViewDetailsCard";
 import UpdatePage from "./UpdatePage/UpdatePage";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -59,7 +60,13 @@ const router = createBrowserRouter([
           path:'/updatePage/:id',
           loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`)),
           element:<PrivateRouter><UpdatePage></UpdatePage></PrivateRouter>
+        },
+        {
+          // path:'/deleteDocument/:id',
+          // // loader:({params})=>fetch(`http://localhost:5001/deleteDocument/${params?.id}`),
+          // element:<DeleteDocument></DeleteDocument>
         }
+
       ]
     },
   ]);
