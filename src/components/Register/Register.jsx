@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AuthContext } from "../ContextApi/FirebaseProvider";
+import Swal from "sweetalert2";
 
 // type Inputs = {
 //   example: string
@@ -18,11 +19,9 @@ import { AuthContext } from "../ContextApi/FirebaseProvider";
 
 const Register = () => {
   const [toggle, setToggle] = useState(false);
-  //   const navigate = useNavigate();
+    const navigate = useNavigate();
   const { createUser,UpdateUser } = useContext(AuthContext);
-  //   // const {name,CreateUserWithEmailAndPassword,loading}=useContext(authContext)
-  //   const { setName, name, CreateUserWithEmailAndPassword, loading,setLoading, UpdateUser } =
-  //     UseContext();
+
 
   const {
     register,
@@ -30,12 +29,10 @@ const Register = () => {
 
     formState: { errors },
   } = useForm();
-  // const onSubmit: SubmitHandler<Inputs> = (data) => {
 
-  // }
 
-  //   const location=useLocation()
-  //   console.log(location.state)
+    const location=useLocation()
+    const from=location?.state ? location.state : '/'
 
   const onSubmit = ({ email, password, Name, photoUrl }) => {
     createUser(email, password)
@@ -43,34 +40,18 @@ const Register = () => {
         const User = userCredential.user;
         UpdateUser(User,Name,photoUrl)
         .then(()=>{
-          toast.success("Successfully Registration.... !");
+          Swal.fire(" Registration Successful!");
+          navigate(from)
 
         })
       })
       .catch(() => {
         toast.error("Registration Fail !", {});
       });
-    // CreateUserWithEmailAndPassword(email, password)
-    //   .then((userCredential) => {
-    //     const User = userCredential.user;
-    //     UpdateUser(User, Name, photoUrl).then(() => {
-    //       toast.success("Successfully Registration.... !");
 
-    //       setTimeout(() => {
-    //         navigate(location?.state?location.state:'/');
-    //       }, 3000);
-    //     });
-
-    //     // console.log(User)
-    //   })
-    //   .catch(() => {
-    //     toast.error("Registration Fail !", {});
-    //   });
   };
 
-  // const onRegister=()=>{
-  //   console.log("Hi......")
-  // }
+ 
   return (
     <HelmetProvider>
       <Helmet>

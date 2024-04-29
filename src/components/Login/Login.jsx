@@ -7,32 +7,33 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AuthContext } from "../ContextApi/FirebaseProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
+   
     formState: { errors },
   } = useForm();
 
   const [toggle, setToggle] = useState(false);
-//   const location = useLocation();
-//   console.log(location);
-//   const navigate = useNavigate();
-//   const { GoogleLogin, GithubLogin, UserLoginWithEmailAndPassword } =
-//     UseContext();
+  const location = useLocation();
+
+  const navigate = useNavigate();
+
 const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(AuthContext);
-//   const from = location?.state ? location.state : "/";
+  const from = location?.state ? location.state : "/";
 
 //   Social Media Login
   const gmailLogin = () => {
     GoogleLogin()
       .then(() => {
-        toast.success("Google Login Successful... !");
-        // setTimeout(() => {
-        //   navigate(from);
-        // }, 3000);
+        Swal.fire("Google Login Successful!");
+        
+        navigate(from)
+        
+       
       })
       .catch(() => {
         toast.error("Sorry!!!Try Again for Login");
@@ -43,10 +44,7 @@ const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(Au
   const githubLogin = () => {
     GithubLogin()
       .then(() => {
-        toast.success("Github Login Successful... !");
-        // setTimeout(() => {
-        //   navigate(from);
-        // },3000);
+        Swal.fire("Github Login Successful!");
       })
       .catch(() => {
         toast.error("Sorry!!!Try Again for Login");
@@ -56,10 +54,7 @@ const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(Au
   const onSubmit = ({ email, password }) => {
     UserLoginWithEmailAndPassword(email, password)
       .then(() => {
-        toast.success("Login Successfully!");
-        // setTimeout(() => {
-        //   navigate(from);
-        // }, 3000);
+        Swal.fire("Login Successful!");
       })
       .catch(() => {
         toast.error("Sorry!!!!Your Email And Password Are Not Matching.");
