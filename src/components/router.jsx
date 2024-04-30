@@ -13,13 +13,15 @@ import SelectedTouristSpotsViewDetails from "./SelectedTouristSpots/SelectedTour
 import AllTouristSpotViewDetailsCard from "./AllTouristSpotViewDetailsCard";
 import UpdatePage from "./UpdatePage/UpdatePage";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
-// import { DatabaseDocumentDelete } from "./deleteUserSingleDocument/DatabaseDocumentDelete";
+import SimilarCountries from "./AllCountries/SimilarCountries";
+import Error from "./Error";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:"/",
@@ -63,10 +65,9 @@ const router = createBrowserRouter([
           element:<PrivateRouter><UpdatePage></UpdatePage></PrivateRouter>
         },
         {
-          // path:'/deleteDocument/:id',
-          // loader:({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`),
-          // element:<DatabaseDocumentDelete></DatabaseDocumentDelete>
-       
+          path:'/specificCountrie/:countryName',
+          loader:({params})=>fetch(`http://localhost:5001/specificCountrie/${params?.countryName}`),
+          element:<SimilarCountries></SimilarCountries>
         }
 
       ]

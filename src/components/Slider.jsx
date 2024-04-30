@@ -16,7 +16,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <div className="relative box-border">
+    <div className="relative box-border overflow-hidden">
       <div className="z-40 opacity-90">
         <Swiper
           spaceBetween={30}
@@ -57,14 +57,14 @@ const Slider = () => {
         <div className="lg:flex flex-col items-center gap-y-3  absolute top-7 z-10 opacity-100">
           <div className="text-2xl  font-bold md:text-5xl my-7 text-green-600">Tour Your Dream Destination with Us.</div>
 
-          <p className=" my-2 font-medium text-orange-100 text-2xl lg:w-1/2">
+          <p className=" my-2 font-medium  h-32  text-orange-100 text-2xl truncate lg:h-auto w-1/2 text-wrap ">
             Welcome to the land of opportunity, diversity, and natural wonders.
             America is a vast and diverse country, offering something for every
             traveler. From the bustling streets of New York City to the majestic
             landscapes of the Grand Canyon, let's embark on a virtual journey
             across this incredible nation.
           </p>
-          <button className="btn btn-active btn-secondary invisible md:visible">Explore More</button>
+          <button className="btn btn-active btn-secondary ">Explore More</button>
 
         </div>
       </div>

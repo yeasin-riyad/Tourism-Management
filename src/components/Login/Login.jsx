@@ -45,6 +45,8 @@ const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(Au
     GithubLogin()
       .then(() => {
         Swal.fire("Github Login Successful!");
+        navigate(from)
+
       })
       .catch(() => {
         toast.error("Sorry!!!Try Again for Login");
@@ -55,6 +57,8 @@ const {  UserLoginWithEmailAndPassword,GoogleLogin,GithubLogin } = useContext(Au
     UserLoginWithEmailAndPassword(email, password)
       .then(() => {
         Swal.fire("Login Successful!");
+        navigate(from)
+
       })
       .catch(() => {
         toast.error("Sorry!!!!Your Email And Password Are Not Matching.");
