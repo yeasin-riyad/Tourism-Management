@@ -26,6 +26,8 @@ const SelectedTouristSpots = () => {
         })}
 
       </div>
+
+     
     </div>
   )
 }
