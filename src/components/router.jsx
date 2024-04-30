@@ -37,9 +37,10 @@ const router = createBrowserRouter([
         },
         {
           path:'/MyList/:name',
-          loader:({params})=>fetch(`http://localhost:5001/myList/${params.name}`),
+          loader:({params})=>fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/myList/${params.name}`),
           element:<PrivateRouter><MyList></MyList></PrivateRouter>
         },
+      
         {
           path:'/Register',
           element:<Register></Register>
@@ -50,23 +51,23 @@ const router = createBrowserRouter([
         },
         {
           path:'/selectedTouristSpot/:id',
-          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
+          loader:(({params})=>fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot/${params.id}`)),
           element:<PrivateRouter><SelectedTouristSpotsViewDetails></SelectedTouristSpotsViewDetails></PrivateRouter>
 
         },
         {
           path:'/allTouristSpot/:id',
-          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params.id}`)),
-          element:<AllTouristSpotViewDetailsCard></AllTouristSpotViewDetailsCard>
+          loader:(({params})=>fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot/${params.id}`)),
+          element:<PrivateRouter><AllTouristSpotViewDetailsCard></AllTouristSpotViewDetailsCard></PrivateRouter>
         },
         {
           path:'/updatePage/:id',
-          loader:(({params})=>fetch(`http://localhost:5001/touristSpot/${params?.id}`)),
+          loader:(({params})=>fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot/${params?.id}`)),
           element:<PrivateRouter><UpdatePage></UpdatePage></PrivateRouter>
         },
         {
           path:'/specificCountrie/:countryName',
-          loader:({params})=>fetch(`http://localhost:5001/specificCountrie/${params?.countryName}`),
+          loader:({params})=>fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/specificCountrie/${params?.countryName}`),
           element:<SimilarCountries></SimilarCountries>
         }
 

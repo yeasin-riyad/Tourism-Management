@@ -95,7 +95,7 @@ const MyList = () => {
                               /* Read more about isConfirmed, isDenied below */
                               if (result.isConfirmed) {
                                 fetch(
-                                  `http://localhost:5001/deleteDocument/${singleData?._id}`,
+                                  `https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/deleteDocument/${singleData?._id}`,
                                   {
                                     method: "DELETE",
                                     headers: {

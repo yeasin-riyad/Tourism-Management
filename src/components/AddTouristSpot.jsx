@@ -40,7 +40,7 @@ const AddTouristSpot = () => {
 
     form.reset();
     // console.log(touristSpot)
-    await fetch('http://localhost:5001/touristSpot',{
+    await fetch('https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot',{
       method: 'POST',
         headers: {
           'Content-Type': 'application/json',

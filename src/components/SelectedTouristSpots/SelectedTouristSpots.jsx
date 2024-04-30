@@ -5,7 +5,7 @@ import SelectedTouristSpotsCard from "./SelectedTouristSpotsCard"
 const SelectedTouristSpots = () => {
     const [selectedSpots,setSelectedSpots]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5001/touristSpot')
+        fetch('https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot')
         .then(res=>res.json())
         .then(data=>setSelectedSpots(data))
     },[])

@@ -61,6 +61,7 @@ const Navbar = () => {
               <li>
                 <NavLink to="/AddTouristSpot">Add Tourists Spot</NavLink>
               </li>
+             
               <li >
                 <NavLink to={`/MyList/${loggedUser?.displayName}`}>
                   My List

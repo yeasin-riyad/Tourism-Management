@@ -56,7 +56,7 @@ const UpdatePage = () => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
 
-             fetch(`http://localhost:5001/touristSpot/${_id}`,{
+             fetch(`https://tourism-management-server-c1n38sukh-yeasin-riyads-projects.vercel.app/touristSpot/${_id}`,{
                 method: 'PUT',
                   headers: {
                     'Content-Type': 'application/json',

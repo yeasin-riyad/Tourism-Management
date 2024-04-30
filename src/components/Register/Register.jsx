@@ -20,7 +20,7 @@ import Swal from "sweetalert2";
 const Register = () => {
   const [toggle, setToggle] = useState(false);
     const navigate = useNavigate();
-  const { createUser,UpdateUser } = useContext(AuthContext);
+  const { createUser,UpdateUser,setLoading } = useContext(AuthContext);
 
 
   const {
@@ -41,6 +41,7 @@ const Register = () => {
         UpdateUser(User,Name,photoUrl)
         .then(()=>{
           Swal.fire(" Registration Successful!");
+          setLoading(false)
           navigate(from)
 
         })
